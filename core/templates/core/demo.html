@@ -1,0 +1,60 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<!--INICIO DEL SLIDER*/------------------------------------------------------------------------>
+    <section id="menu">
+        <div class="banner">
+            <ul>
+                <li><img src="{% static 'img/pexels-simona-kidrič-2607544.jpg' %}" alt=""></li>
+                <li><img src="{% static 'img/pexels-sharon-snider-4520484.jpg' %}" alt=""></li>
+                <li><img src="{% static 'img/pexels-lina-kivaka-1741205.jpg'%}" alt=""></li>
+                <li><img src="{% static 'img/pexels-anna-shvets-4588064.jpg'%}" alt=""></li>
+            </ul>
+         </div>
+    </section>
+<!--TERMINA*/----------------------------------------------------------------------------------->
+
+<!--INICIO DE OFERTAS ONLINE-------------------------------------------------------------------->
+        <section>
+            <article id="foto">
+                <div class="fotos">
+
+                    <ul>
+                        <li><img src="{% static 'img/pexels-ellie-burgin-3432929.jpg' %}" alt=""></li>
+                        <li><img src="{% static 'img/pexels-anna-shvets-4587987.jpg'%}" alt=""></li>
+                    </ul>
+                </div>
+                <span class="oferta">
+                    <p>!OFERTAS ONLINE</p>
+                    <P>MEJORES IMPOSIBLE!</P>
+                </span>
+                <div class="imagenes">
+                    <ul>
+                        <li><img src="{% static 'img/pexels-munal-8654359.jpg'%}" alt=""></li>
+                        <li><img src="{% static 'img/pexels-wojciech-kumpicki-2071873 (1).jpg'%}" alt=""></li>
+                    </ul>
+
+
+                </div>
+
+            </article>
+        </section>
+<!--TERMINA------------------------------------------------------------------------------------------->
+
+<!--INICIO DEL CONTENEDOR----------------------------------------------------------------------------->
+<section class="contenedor">
+    {% for alimento in alimento %}
+    <div class="contenedor-items">
+        <div class="item">
+            <span class="titulo-item">{{ alimento.detalle }}</span>
+            <img src="{{ alimento.imagen }}" alt="" class="img-item">
+            <span class="precio-inicial">{{ alimento.tachado }}</span>
+            <span class="precio-item">${{ alimento.precio }}</span>
+            <span class="stock">stock:{{alimento.stock}}</span>
+            <a href="{% url 'addtocar' alimento.codigo %}" class="boton-item">Agregar al Carrito</a>
+        </div>
+    </div>   
+    {% endfor %}         
+</section>
+{% endblock %}

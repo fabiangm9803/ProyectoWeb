@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Average', serif;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+section#menu{
+    justify-content: center;
+    display:flex;
+    width: 545px;
+    background: rgb(16, 150, 240);
+    margin: auto;
+    box-shadow: 7px 13px 37px #000;
+    padding: 40px 10px;
+    border-top: 4px solid #01ab4859;
+    color: white;
+    border-radius: 25px;
+    margin-top: 30px;
+}
+
+
+button{
+	
+	width: 60%;
+    height: 40px;
+    background: #76aaf8;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+    font-size: 17px;
+    border-radius: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px;
+    margin-inline-start: 18%;
+}
+
+label{
+    font-size: 17px;
+
+}
+
+input#id_username {
+    margin-bottom: 40px;
+    border-radius: 25px;
+    padding: 10px;
+    width: 100%;
+    
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    color: #6390f1;
+}
+
+
+input#id_password {
+	border-radius: 25px;
+    padding:10px;
+	margin-top:auto;
+    width: 350px;
+    
+}
+
+
+#informacion {
+    margin-top: 23%;
+    background-color: #6390f1;
+    display: flex;
+    justify-content: space-between;
+    padding: 55px;
+}
+
+
+
+@media (max-width:800px){
+    .login{
+        width: 400px;
+        height: 350px;
+    }
+
+    .slider-track{
+        margin-top: 20px;
+    }
+}
+
+

@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+.registro{
+    width: 500px;
+    background: #b5fd8500;
+    padding: 30px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: rgb(0, 0, 0);
+    box-shadow: 7px 13px 37px #000;
+    background-color: rgb(16, 150, 240);
+    border-radius: 25px;
+}
+
+.registro h4 {
+    font-size: 23px;
+    margin-bottom: 20px;
+    color: white;
+
+}
+
+.controls {
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.registro p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    
+}
+
+.registro a{
+    color: #1f53c5;
+}
+
+.registro a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+
+}
+
+.registro .botons{
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+input, select, textarea{
+    border: none;
+    height: 2.5rem;
+    background-color: #ededed;
+    outline: none;
+    padding: 0px 50px;
+    margin-inline-start: 35px;
+    border-radius: 20px;
+    width: 90%;
+}
+
+
+div {
+    padding: 10px;
+}
+
+
+.error{
+    background-color: rgba(253, 81, 81, 0.623);
+    margin-inline-start: 35px;
+}
+
+form{
+    justify-content: center;
+    width: 600px;
+    background: rgb(16, 150, 240);
+    margin: auto;
+    box-shadow: 7px 13px 37px #000;
+    padding: 40px 10px;
+    border-top: 4px solid #01ab4859;
+    color: white;
+    border-radius: 25px;
+    margin-top: 30px;
+}
+
+small#hint_id_username {
+    text-align: center;
+    max-width: 10px;
+    margin-left: 45px;
+}
+
+small#hint_id_first_name {
+    text-align: center;
+    max-width: 10px;
+    margin-left: 45px;
+}
+
+small#hint_id_last_name {
+    text-align: center;
+    max-width: 10px;
+    margin-left: 45px;
+}
+
+small#hint_id_email {
+    text-align: center;
+    max-width: 10px;
+    margin-left: 45px;
+}
+
+label.requiredField {
+    margin-block-start: 20px;
+    margin-left: 50px;
+}
+
+small#hint_id_password2 {
+    margin-left: 45px;
+}
+
+li {
+    margin-left: 45px;
+}
+
+button{
+    width: 60%;
+    height: 40px;
+    background: #00c3ffb9;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+    font-size: 17px;
+    border-radius: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 10px;
+    margin-inline-start: 18%;
+}
+
+
+@media (max-width:800px){
+    .registro{
+        margin-top: 30px;
+        padding: 15px;
+    }
+}

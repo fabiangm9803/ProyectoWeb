@@ -1,0 +1,38 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<h1>Mis compras</h1>
+<section id="catalogo">
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>FECHA</th>
+                <th>TOTAL</th>
+                <th>ESTADO</th>
+                <th>DETALLE</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for fila in compras %}
+            <tr>
+                <td>{{fila.id}}</td>
+                <td>{{fila.fecha}}</td>
+                <td>{{fila.total}}</td>
+                <td>{{fila.estado}}</td>
+                <th>
+                    <a href="{% url 'addtocar' fila.id %}">
+                        <h1 class="detalle">ver detalle</h1>
+                    </a>
+                </th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% if not compras %}
+        <h2>Aún no tienes compras realizadas!.</h2>
+    {% endif %}
+</section>
+{% endblock %}

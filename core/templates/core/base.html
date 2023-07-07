@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'estilo.css' %}">
+    <title>Mi Mascota</title>
+    {% block head %}
+    {% endblock %}
+</head>
+
+
+<body>
+ <!-- LAS DOS BARRAS-->
+    <header>
+            <!--inicio de la primera barra-->
+            <div id="arriba">
+
+                <img src="{% static 'img/mi mascota.png' %}" alt class="imagen">
+                <input type="text" placeholder="¿QUE DESEA BUSCAR PARA SU MASCOTA?">
+                <nav id="na">
+                    <span class="texto">
+                        {% if user.is_authenticated %}
+                            <strong>{{user.username}}</strong>
+                            {% if suscrito %}
+                                ⭐
+                            {% else %}
+                                🛑
+                            {% endif %}
+                            <a href="{% url 'logout' %}">/Salir</a>
+                            
+                        {% else %}
+                        <a href="{% url 'login1' %}">INICIAR SESION /</a> 
+                        <a href="{% url 'registro' %}">REGISTRAR /</a>
+                        {% endif %}
+                    </span>
+                    <a href="{% url 'carrito' %}"><img src="{% static 'img/icons8_favorite_cart_40px.png' %}" alt class="imagen"></a>
+                </nav>
+            </div>       
+<!-------------------------------------------------------------------------------------------------------------->
+
+        <nav class="aba">
+            <ul class="menu-horizontal">
+                <li><a href="{% url 'home' %}">INICIO</a></li>
+                <li><a href="{% url 'suscribir' %}">SUSCRIPCION</a></li>
+                <li><a href="{% url 'home' %}">OFERTAS</a></li>
+                <li>
+                    <a href="#"> PEDIDO</a>
+                    <ul class="menu-vertical">
+                        <!--<li><a href="SEGUIMIENTO/index.html">Donde Viene</a></li>-->
+                        <li><a href="{% url 'historial' %}">Historial</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">PERRO</a>
+                    <ul class="menu-vertical">
+                        <li><a href="#">Alimentos</a></li>
+                        <li><a href="ALIMENTO PERRO/accesorios/index.html">Accesorios</a></li>
+                        <li><a href="#">Higiene</a></li>
+                        <li><a href="#">Bebederos, Platos y mas</a></li>
+                        <li><a href="#">Casas, Camas y mas</a></li>
+
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">GATO</a>
+                    <ul class="menu-vertical">
+                        <li><a href="#">Alimentos</a></li>
+                        <li><a href="ALIMENTO GATO/accesorios/index.html">Accesorios</a></li>
+                        <li><a href="#">Higiene</a></li>
+                        <li><a href="#">Bebederos, Platos y mas</a></li>
+                        <li><a href="#">Casas, Camas y mas</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<!--TERMINO DE BARRAS-------------------------------------------------------------------------->
+
+{% block content %}
+
+{% endblock %}
+
+<div id="informacion">
+    <div class="info">
+        <p>HORARIOS</p>
+        <P>Lunes a Viernes de 10:00 hasta 18:00</P>
+        <p>Domingo y Sabado de 11:30 hasta 15:30</p>
+    </div>
+    <div>
+        <p>CONTACTOS</p>
+        <P>WhatsApp:+56955352005</P>
+        <p>Correo:Mi.mascota005@gmail.com</p>
+    </div>
+</div>
+<!-- <div class="bg-5">
+    <h1 class="animated-shadow">SOME TEXT</h1>
+</div>-->
+</body>
+</html>
+

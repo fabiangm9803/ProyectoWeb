@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section class="contenedor">
+    {% for alimento in alimento %}
+    <div class="contenedor-items">
+        <div class="item">
+            <span class="titulo-item">{{ alimento.detalle }}</span>
+            <img src="{{ alimento.imagen }}" alt="" class="img-item">
+            <span class="precio-inicial">{{ alimento.tachado }}</span>
+            <span class="precio-item">${{ alimento.precio }}</span>
+            <span class="stock">stock:{{alimento.stock}}</span>
+            <a href="{% url 'addtocar' alimento.codigo %}" class="boton-item">Agregar al Carrito</a>
+        </div>
+    </div>   
+    {% endfor %}         
+</section>
+{% endblock %}
